@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useMainStore } from '@/store/main'
+
+import { NButton } from 'naive-ui'
+
+const mainStore = useMainStore()
+
+console.log(import.meta.env.VITE_APP_WEB_URL)
 
 defineProps<{ msg: string }>()
 
@@ -8,6 +15,12 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
+  <n-button>naive-ui123</n-button>
+  <n-config-provider :locale="zhCN" :theme="theme">
+    <!-- 容器 -->
+  </n-config-provider>
+
+  <div>用户名:{{ mainStore.name }}<br />长度:{{ mainStore.nameLength }}</div>
 
   <p>
     Recommended IDE setup:

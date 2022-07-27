@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build:dev": "vite build --mode development",
+    "build:pro": "vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "prettier": "prettier --write .",
@@ -12,8 +13,10 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "naive-ui": "^2.31.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.0-rc.10",
+    "vfonts": "^0.0.3",
     "vue": "^3.2.25",
     "vue-router": "4"
   },
